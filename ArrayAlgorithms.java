@@ -11,14 +11,19 @@ public class ArrayAlgorithms {
 
    public ArrayAlgorithms(int arraySize) {
       // REQUIRED: initialize intArray to be of size arraySize
+      intArray = new int [arraySize];
    }
 
    public void populateArrayWithRandom() {
       // REQUIRED: populate intArray with random integers from 0 - 99
+      for(int i = 0; i < intArray.length; i++){
+         intArray[i] = (int)Math.random() * 100;
+      }
    }
 
    public void populateArrayWithSequential(int startNum) {
       // REQUIRED: populate intArray with sequential integers starting at startNum
+      
    }
 
    public int findMax() {
@@ -35,25 +40,13 @@ public class ArrayAlgorithms {
       // NOTE: Use an enhanced for loop for this method
    }
 
-   // ===== UWHS ALGORITHMS =====
-
-   public int longestContiguousSubarray() {
-      // UWHS ONLY:
-      // Return the length of the longest strictly increasing contiguous segment
-   }
-
-   public int[] moveZeroesToEnd() {
-      // UWHS ONLY:
-      // Move all zeros to the end of while preserving order of non-zero elements. 
-      // HINT: use a new array instead of changing intArray
-      // Return the changed array
-   }
-
    public static void main(String[] args) {
       // REQUIRED:
       // 1) Create an ArrayAlgorithms object
+      ArrayAlgorithms arrayAlgorithms = new ArrayAlgorithms(10);
       // 2) Populate the array with random numbers
+      arrayAlgorithms.populateArrayWithRandom();
       // 3) Call and print the result of EACH REQUIRED method
-      // 4) If you are UWHS, also test the UWHS methods
+    
    }
 }
