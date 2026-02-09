@@ -23,23 +23,40 @@ public class ArrayAlgorithms {
 
    public void populateArrayWithSequential(int startNum) {
       // REQUIRED: populate intArray with sequential integers starting at startNum
-      
+         for (int i = 0; i < intArray.length; i++) {
+             intArray[i] = startNum + i;
+      }
    }
 
    public int findMax() {
       // REQUIRED: return the largest integer in intArray
+      int maxNumber = 0;
+      for(int max : intArray){
+         maxNumber += max;
+      }
+      return maxNumber;
    }
 
    public boolean hasDuplicates() {
       // REQUIRED: return true if there are duplicate values in the array
       // HINT: use a nested for loop
+      
    }
 
    public boolean isInArray(int intToFind) {
       // REQUIRED: return true if intToFind is in intArray.
       // NOTE: Use an enhanced for loop for this method
-   }
-
+      boolean intFound;
+      for(int findInt : intArray){
+         if (findInt == intToFind){
+           intFound = true;
+      }
+         else {
+             intFound = false;
+      }
+      }
+      return intFound;
+}
    public static void main(String[] args) {
       // REQUIRED:
       // 1) Create an ArrayAlgorithms object
